@@ -1,23 +1,12 @@
 import java.time.LocalDate;
 
 class Evt{
-    int type;     //0 : arrivée, 1: départ
+    boolean type;     //false : arrivée, true: départ
     int number;   //n° de l'évenement
-    static float dateActuelle = System.currentTimeMillis();
-    float date = (System.currentTimeMillis - dateActuelle) / 1000000000 ;   //temps en secondes
-    LocalDate tempsArrive = LocalDate.now();
-    if (type){     // si c'est un départ
-
-    }
-    public Evt(int type){
+    double temps;
+    public Evt(boolean type, double tps, int num){
         this.type = type;
-        if (type){
-            Stats.nbArrives++;
-            number = Stats.nbArrives;
-        }
-        else{
-            Stats.nbDeparts++;
-            number = Stats.nbDeparts;
-        }
+        temps = tps;
+        number = num;
     }
 }

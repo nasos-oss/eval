@@ -1,9 +1,9 @@
 import java.util.Random;
 import java.lang.Math;
 class Utils{
-    public float loi_exponentielle(int lambda){
+    public static double loi_exponentielle(double param, double tArrive){
         Random rand = new Random();
-        int x = rand.nextFloat();
-        return tArrive - ((Math.log(1 - x))/lambda);
+        double x = rand.nextDouble();
+        return tArrive - ((Math.log(1 - x))/param);
     }
 }
